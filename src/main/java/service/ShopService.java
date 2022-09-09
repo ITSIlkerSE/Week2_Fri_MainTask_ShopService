@@ -22,15 +22,15 @@ public class ShopService {
         productRepo.addProduct(3, product3);
         productRepo.addProduct(4, product4);
 
-//        productRepo.listAllProducts();
-//        System.out.println(productRepo.listAllProducts());
+        productRepo.listAllProducts();
+        System.out.println(productRepo.listAllProducts());
 
-//        System.out.println(product1);
+        System.out.println(product1);
 
         OrderRepo orderSystem = new OrderRepo();
 
         Order order1 = new Order(1, product1);
-        Order order2 = new Order(2 ,product2);
+        Order order2 = new Order(2, product2);
 
 
         orderSystem.putOrderInMap(1, order1);
@@ -41,9 +41,6 @@ public class ShopService {
 
 
     }
-
-
-
 
 
 }

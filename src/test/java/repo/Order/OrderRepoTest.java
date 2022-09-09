@@ -40,32 +40,31 @@ class OrderRepoTest {
     }
 
     @Test
-    void shouldReturnOrderWhenIdIsPresent() {
+    void shouldReturnOrderListWhenAskedFor() {
 
         //Given
 
-        Product product = new Product(1, "Maximenu");
+        Product product = new Product(1, "Maxidadanu");
+        Product product1 = new Product(2, "Maxdasdasenu");
+        Product product2 = new Product(3, "Maxdadamenu");
 
         Map<Integer, Product> mapProducts = new HashMap<>();
 
         Order order = new Order(1, product);
+        Order order1 = new Order(2, product1);
+        Order order2 = new Order(3, product2);
 
         OrderRepo orderRepo = new OrderRepo();
 
         orderRepo.putOrderInMap(5, order);
+        orderRepo.putOrderInMap(5, order1);
         orderRepo.putOrderInMap(5, order2);
-        orderRepo.putOrderInMap(5, order3);
 
         //When
 
 
-        Order actual = orderRepo.getOrderById(5);
-
-
         //Then
 
-        assertEquals(order, actual);
 
-
-
+    }
 }

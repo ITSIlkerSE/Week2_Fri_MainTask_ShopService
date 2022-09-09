@@ -21,8 +21,8 @@ public class OrderRepo {
 
     }
 
-    public Map<Integer, Order> listAllProducts(){
-        return mapOrders ;
+    public Map<Integer, Order> listAllProducts() {
+        return mapOrders;
     }
 
 

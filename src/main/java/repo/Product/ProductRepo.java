@@ -10,12 +10,12 @@ public class ProductRepo {
     private Map<Integer, Product> products = new HashMap<>();
 
 
-    public void addProduct(Integer id, Product name){
+    public void addProduct(Integer id, Product name) {
         products.put(id, name);
     }
 
-    public Map<Integer, Product> listAllProducts(){
-        return products ;
+    public Map<Integer, Product> listAllProducts() {
+        return products;
     }
 
 
