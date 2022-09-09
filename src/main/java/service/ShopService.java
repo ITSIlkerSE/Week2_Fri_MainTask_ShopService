@@ -5,9 +5,11 @@ import repo.Order.OrderRepo;
 import repo.Product.Product;
 import repo.Product.ProductRepo;
 
+import java.io.IOException;
+
 public class ShopService {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Product product1 = new Product(41465, "Cheeseburger");
         Product product2 = new Product(44414, "Hamburger");
@@ -22,6 +24,7 @@ public class ShopService {
         productRepo.addProduct(3, product3);
         productRepo.addProduct(4, product4);
 
+
         productRepo.listAllProducts();
         System.out.println(productRepo.listAllProducts());
 
@@ -31,14 +34,16 @@ public class ShopService {
 
         Order order1 = new Order(1, product1);
         Order order2 = new Order(2, product2);
+        Order order3 = new Order(3, product3);
 
 
         orderSystem.putOrderInMap(1, order1);
         orderSystem.putOrderInMap(2, order2);
+        orderSystem.putOrderInMap(3, order3);
 
 
+        System.out.println(orderSystem.getOrderById(2));
         System.out.println(orderSystem.getMapOrders());
-
 
     }
 

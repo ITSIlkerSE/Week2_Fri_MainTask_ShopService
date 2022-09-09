@@ -14,6 +14,11 @@ public class ProductRepo {
         products.put(id, name);
     }
 
+    public Product getProductById(Integer id){
+        if (products.get(id) == null) throw new RuntimeException("product not present");
+        return products.get(id);
+    }
+
     public Map<Integer, Product> listAllProducts() {
         return products;
     }
