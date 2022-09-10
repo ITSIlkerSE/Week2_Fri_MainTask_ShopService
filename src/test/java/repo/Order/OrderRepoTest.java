@@ -62,8 +62,11 @@ class OrderRepoTest {
 
         //When
 
+        OrderRepo actual = (OrderRepo) orderRepo.getMapOrders();
 
         //Then
+
+        assertEquals(orderRepo , actual);
 
 
     }
