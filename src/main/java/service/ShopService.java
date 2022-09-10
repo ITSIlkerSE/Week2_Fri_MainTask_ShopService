@@ -6,10 +6,16 @@ import repo.Product.Product;
 import repo.Product.ProductRepo;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class ShopService {
 
     public static void main(String[] args) throws IOException {
+
+        Scanner myScannerShopService = new Scanner(System.in);
+
+
+
 
         Product product1 = new Product(41465, "Cheeseburger");
         Product product2 = new Product(44414, "Hamburger");
