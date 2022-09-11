@@ -62,11 +62,11 @@ class OrderRepoTest {
 
         //When
 
-        OrderRepo actual = (OrderRepo) orderRepo.getMapOrders();
+        Map<Integer, Order> actual = orderRepo.getMapOrders();
 
         //Then
 
-        assertEquals(orderRepo , actual);
+        assertEquals("{5=Order{id=3, mapProducts={3=Product{id=3, name='Maxdadamenu'}}}}", actual);
 
 
     }

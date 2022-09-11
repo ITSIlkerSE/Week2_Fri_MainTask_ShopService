@@ -12,11 +12,6 @@ public class ShopService {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner myScannerShopService = new Scanner(System.in);
-
-
-
-
         Product product1 = new Product(41465, "Cheeseburger");
         Product product2 = new Product(44414, "Hamburger");
         Product product3 = new Product(41256, "Pommes");
@@ -50,6 +45,29 @@ public class ShopService {
 
         System.out.println(orderSystem.getOrderById(2));
         System.out.println(orderSystem.getMapOrders());
+
+        Scanner myScannerShopService = new Scanner(System.in);
+        System.out.println("Retrieve order or product?");
+        String scanProductOne = myScannerShopService.nextLine();
+        if ("product".equals(scanProductOne)) {
+            System.out.println("Products : " + productRepo.listAllProducts());
+            System.out.println("Put in id to retrieve specific product ");
+            Scanner myScannerProduct = new Scanner(System.in);
+            String productId = myScannerProduct.nextLine();
+            System.out.println("Products by Id : " + productRepo.getProductById(Integer.parseInt(productId)));
+
+        } else if (scanProductOne.equals("order")) {
+            System.out.println("Orders : " + orderSystem.getMapOrders());
+            System.out.println("Put in id to retrieve specific order ");
+            Scanner myScannerOrder = new Scanner(System.in);
+            int orderId = Integer.parseInt(myScannerOrder.nextLine());
+            System.out.println("Orders by Id : " + orderSystem.getOrderById(orderId));
+
+
+        } else {
+            System.out.println("Please pick either products or orders");
+        }
+
 
     }
 
