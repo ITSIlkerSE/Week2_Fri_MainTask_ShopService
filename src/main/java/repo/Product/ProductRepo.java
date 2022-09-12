@@ -24,10 +24,6 @@ public class ProductRepo {
     }
 
 
-    public Map<Integer, Product> getMapOfProducts() {
-        return products;
-    }
-
     public void setMapOfProducts(Map<Integer, Product> mapOfProducts) {
         this.products = mapOfProducts;
     }

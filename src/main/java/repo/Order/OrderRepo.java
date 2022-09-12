@@ -27,10 +27,6 @@ public class OrderRepo {
         return mapOrders;
     }
 
-    public void setMapOrders(Map<Integer, Order> mapOrders) {
-        this.mapOrders = mapOrders;
-    }
-
     @Override
     public String toString() {
         return "OrderRepo{" +
@@ -38,6 +34,3 @@ public class OrderRepo {
                 '}';
     }
 }
-
-//    public Map<Integer, Product> listAllProducts(){
-//        return products ;
